@@ -1,3 +1,3 @@
 # github_user_list
 
-A new Flutter project.
+The application is displayed by a Github user
