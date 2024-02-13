@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:github_user_list/data/bloc/github_details_bloc.dart';
+import 'package:github_user_list/generated/locale_keys.g.dart';
 import 'package:github_user_list/ui/widgets/profile_body.dart';
 import '../../data/models/models.dart';
 
@@ -44,14 +46,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                   const Text('Произошла ошибка'),
-                   const Text('Попробуйте позже'),
+                   Text(
+                    LocaleKeys.Some_error.tr(),
+                    ),
+                   Text(
+                    LocaleKeys.Try_later.tr(),
+                    ),
                     const SizedBox(height: 30),
                    TextButton(
                     onPressed: (){
                       Navigator.pop(context);
                    }, 
-                   child: const Text('Назад'))
+                   child: Text(
+                    LocaleKeys.Back.tr(),
+                    ))
                 ],
               )
             );
@@ -61,14 +69,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Text('Произошла неизвестная ошибка.'),
-                  const Text('Попробуйте позже!'),
+                  Text(
+                    LocaleKeys.Some_error.tr(),
+                    ),
+                  Text(
+                    LocaleKeys.Try_later.tr(),
+                    ),
                   const SizedBox(height: 30),
             TextButton(
               onPressed: () {
                 Navigator.pop(context); 
               },
-              child: const Text('Назад'),
+              child: Text(
+                LocaleKeys.Back.tr(),
+                ),
             ),
                 ],
               ),

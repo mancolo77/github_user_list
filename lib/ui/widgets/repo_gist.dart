@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:github_user_list/generated/locale_keys.g.dart';
 import 'package:github_user_list/ui/widgets/following_followers.dart';
 import 'package:github_user_list/ui/widgets/items_card.dart';
 
@@ -23,7 +25,7 @@ class RepoGist extends StatelessWidget {
                 bottom: 30,
               ),
             child: FollowingsAndFollowers(
-              field: 'Repos',
+              field: LocaleKeys.Repos.tr(),
               value: repoCount,
             )
           ),
@@ -41,7 +43,7 @@ class RepoGist extends StatelessWidget {
                 bottom: 30,
               ),
               child: FollowingsAndFollowers(
-                field: 'Gists',
+                field: LocaleKeys.Gists.tr(),
                 value: gistCount,
               )
           ),

@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:github_user_list/data/models/constants.dart';
+import 'package:github_user_list/generated/locale_keys.g.dart';
 import 'package:github_user_list/ui/widgets/items_card.dart';
 
 class Bio extends StatelessWidget {
@@ -19,11 +21,11 @@ class Bio extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          const Expanded(
+          Expanded(
             child: Text(
-              'О себе:',
+              LocaleKeys.About_me.tr(),
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: secondaryLight,
                 fontSize: 20.0,
               ),

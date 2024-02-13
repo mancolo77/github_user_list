@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:github_user_list/data/models/constants.dart';
 import 'package:github_user_list/data/models/user_profile.dart';
+import 'package:github_user_list/generated/locale_keys.g.dart';
 import 'package:github_user_list/ui/widgets/back_button.dart';
 import 'package:github_user_list/ui/widgets/bio.dart';
 import 'package:github_user_list/ui/widgets/detail_item.dart';
@@ -57,14 +59,14 @@ class ProfileBody extends StatelessWidget {
                     children: <Widget>[
                       FollowingsAndFollowers(
                         value: data.followers.toString(),
-                        field: 'Подписчиков',
+                        field: LocaleKeys.Subscribers.tr(),
                       ),
                       const SizedBox(
                         width: 10.0,
                       ),
                       FollowingsAndFollowers(
                         value: data.following.toString(),
-                        field: 'Подписок',
+                        field: LocaleKeys.Subscriptions.tr(),
                       )
                     ],
                   ),
@@ -94,17 +96,17 @@ class ProfileBody extends StatelessWidget {
           child: Column(
             children: <Widget>[
               DetailItem(
-                field: 'Имя',
+                field: LocaleKeys.Name.tr(),
                 value: data.name,
               ),
               kPrimaryDivider,
               DetailItem(
-                field: 'Компания',
+                field: LocaleKeys.Company.tr(),
                 value: data.company,
               ),
               kPrimaryDivider,
               DetailItem(
-                field: 'Локация',
+                field: LocaleKeys.Location.tr(),
                 value: data.location,
               ),
             ],
